@@ -1,0 +1,39 @@
+        body{
+    color: white;
+    text-shadow: 1px 1px black;
+    background-color: #777777;
+}
+h1{
+    background-color: #555555;
+    border-radius: 10px;
+    width: 162.5px;
+    border: 1px solid #FFA421;
+}
+h2{
+    background-color: #555555;
+    border-radius: 10px;
+    width: 141.5px;
+    border: 1px solid #FFA421;
+}
+h3{
+    background-color: #555555;
+    border-radius: 10px;
+    width: 90px;
+    border: 1px solid #FFA421;
+}
+.title{
+    border-bottom: 10px #FFA421 dotted;
+
+}
+a:link{
+    color: #FFA421;
+    text-decoration: none;
+    
+}
+a:visited{
+    color: gray;
+}
+a:hover{
+    color: pink;
+
+}
