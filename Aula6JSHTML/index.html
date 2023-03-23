@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img{
+            border-radius: 10px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>indrucao javascript</h1>
+    <div>
+    <h2>ver dada e hora</h2>
+    <p>clique no botao para ver a data e hora do sistema</p>
+    <button onclick="document.getElementById('dh').innerHTML = Date()">
+        veja a data e hora
+    </button>
+    
+    <p id="dh"></p>
+    </div>
+    <div>
+        <h2>transferir informacao com js</h2>
+        <p id="copy1">este paragrafo sera copiado para o pargrafo abaixo do botao</p>
+        <button onclick="myFunction()">
+            clique aqui para copiar
+        </button>
+        <p id="copy2"></p>
+    
+    </div>
+    <script>
+        function myFunction()
+        {
+            var x = document.getElementById("copy1").innerHTML;
+            document.getElementById("copy2").innerHTML = x;
+        }
+    </script>
+    
+    
+    <img id="lampada" src="https://www.w3schools.com/js/pic_bulboff.gif" onclick="changeImage()" alt="lampadadesligada">
+    <img id="theRock" src="theRockSmile.gif" onclick="changeImage()" alt="la rocha sorridente" width="300" height="180">
+<button onclick="ligar()">Ligar!</button>
+    <button onclick="desligar()">Desligar!</button>
+    <div>
+        <h2>alterando estilo com js</h2>
+        <p id="pStyle" onmouseover="mouseHoverIn()" onmouseout="mouseHoverOut()">este paragrafo sera alterado quando o botao abaixo for clicado</p>
+    </div>
+    <button onmouseover="mouseHoverIn()" onmouseout="mouseHoverOut()" onclick="editStyle() ">Clique para editar o estilo do paragrafo</button>
+    
+    <p>clique no botão para ver janela</p>
+    <button id="window" onclick="window()"></button>
+    
+    
+    <script>
+    function editStyle()
+    {
+        document.getElementById("pStyle").style.fontSize='5em';
+    }
+    function mouseHoverIn()
+    {
+        document.getElementById("pStyle").style.backgroundColor='pink';
+        document.getElementById("pStyle").style.fontSize='2em';
+    }
+    function mouseHoverOut()
+    {
+        document.getElementById("pStyle").style.backgroundColor='white';
+        document.getElementById("pStyle").style.fontSize='1em';
+    }
+
+
+
+
+
+
+
+
+    
+    
+    function ligar()
+    {
+        document.getElementById("lampada").src = "https://www.w3schools.com/js/pic_bulbon.gif";
+    }
+    function desligar()
+    {
+        document.getElementById("lampada").src = "https://www.w3schools.com/js/pic_bulboff.gif";
+    }
+    function tuEhMan()
+    {
+        document.getElementById("theRock").src = "theRockEye.gif";
+    }
+    function lmao()
+    {
+        document.getElementById("theRock").src = "theRockSmile.gif";
+    }
+
+    function changeImage() 
+    {
+        
+        var image = document.getElementById('theRock');
+        if(image.src.match("Eye")){
+        image.src = "theRockSmile.gif";
+        }else if(image.src.match("Smile")){
+        image.src = "theRockSus.gif";
+        }else{
+        image.src = "theRockEye.gif";
+        }
+   
+    }
+
+    </script>
+</body>
+</html>
