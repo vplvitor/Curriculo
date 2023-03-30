@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/atividade.js"></script>
+    <title>Tabuada</title>
+
+</head>
+<body>
+    <h1>Digite um numero que deseja ver a tabuada</h1>
+    <input id="numero" type="number">
+    <input type="button" value="submit" onclick="tabuada()" />
+    <div id="result"></div>
+    <h2>Digite um numero para a tabuada reversa</h2>
+    <input id="numRev" type="number">
+    <input type="button" value="submit" onclick="tabuadaReversa()">
+    <div id="tabRev"></div>
+    <h3>Clique para contar</h3>
+    <div id="divCont">
+        Botão recebeu
+        <button id="cont" onclick="contador()">0</button>
+        cliques.
+    </div>
+    <div>
+        Clique para receber um numero aleatorio
+        <button id="random" onclick="random()">Numero</button>
+    </div>
+    <div>
+        digite dois numeros de parametro para receber o aleatorio
+        <input id="randomMin" type="number">
+        <input type="randomMax" type="number">
+        <input type="button" value="submit">
+    </div>
+    <div id="randomMaxMin"></div>
+</body>
+</html>
+function tabuada()
+{
+    let numero = document.getElementById('numero').value;
+    let divisoria = document.getElementById("result");
+    divisoria.innerHTML = `<p>A Tabuada é do ${numero}</p>`;
+    for(let i = 1; i <= 10; i++)
+    {
+        let result = numero * i;
+        const node = document.createElement("p");
+        const tabuadaFinal = document.createTextNode(`${numero} x ${i} = ${result}`);
+        node.appendChild(tabuadaFinal);
+        divisoria.appendChild(node);
+    }
+
+
+}
+function tabuadaReversa()
+{
+    let numRev = document.getElementById('numRev').value;
+    let tabRev = document.getElementById("tabRev");
+    tabRev.innerHTML = `Lista da Tabuada reversa de ${numRev}`;
+    for(let i = 0; i <= 10; i++)
+    {
+        let result = numRev / i;
+        const node = document.createElement("p");
+        const tabuadaReversa = document.createTextNode(`${numRev} / ${i} = ${result}`);
+        node.appendChild(tabuadaReversa);
+        tabRev.appendChild(node);
+    }
+}
+let cont = 0;
+function contador()
+{
+    
+    cont = cont + 1;
+    document.getElementById("cont").innerHTML = cont;
+    if(cont == 5)
+    {
+        document.getElementById("cont").innerHTML = cont + " =^)";
+    }
+    
+}
+function random()
+{
+    let random = parseInt(Math.random()*100);
+    document.getElementById("random").innerHTML = random;
+}
+function randomMaxMin()
+{
+    let randomMin = document.getElementById('randomMin').value.Math.ceil(randomMin);
+    let randomMax = document.getElementById('randomMax').value.Math.floor(randomMax);
+    let randomMaxMin = Math.floor(Math.random() * (randomMax - randomMin + 1) + randomMin);
+    document.getElementById("randomMaxMin").innerHTML = randomMaxMin;
+}

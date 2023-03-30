@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/atividade.js"></script>
+    <title>Tabuada</title>
+
+</head>
+<body>
+    <h1>Digite um numero que deseja ver a tabuada</h1>
+    <input id="numero" type="number">
+    <input type="button" value="submit" onclick="tabuada()" />
+    <div id="result"></div>
+    <h2>Digite um numero para a tabuada reversa</h2>
+    <input id="numRev" type="number">
+    <input type="button" value="submit" onclick="tabuadaReversa()">
+    <div id="tabRev"></div>
+    <h3>Clique para contar</h3>
+    <div id="divCont">
+        Botão recebeu
+        <button id="cont" onclick="contador()">0</button>
+        cliques.
+    </div>
+    <div>
+        Clique para receber um numero aleatorio
+        <button id="random" onclick="random()">Numero</button>
+    </div>
+    <div>
+        digite dois numeros de parametro para receber o aleatorio
+        <input id="randomMin" type="number">
+        <input type="randomMax" type="number">
+        <input type="button" value="submit">
+    </div>
+    <div id="randomMaxMin"></div>
+</body>
+</html>
