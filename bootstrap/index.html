@@ -8,45 +8,33 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="aula6.css">
     <title>Bootstrap</title>
-</head>
-<body>
-    <div class="container-fluid pt-5 conteudo">
-        <h1>Página Bootstrap</h1>
+<body class="bg-info bg-gradient conteudo">
+    <div class="col-12 p-4 mb-4 text-white">
+        <h1>Super Sorteador</h1>
     </div>
-    <div class="container p-5 my-5 border">
-        <h1>Página Bootstrap</h1>
-        <p>Este elemento conntem bordas cores e margens</p>
-    </div>
-    <div class="container p-5 my-5 bg-dark text-white">
-        <h1>Página Bootstrap</h1>
-        <p>Este elemento conntem bordas cores e margens</p>
-    </div>
-    <div class="container p-5 my-5 bg-primary text-white">
-        <h1>Página Bootstrap</h1>
-        <p>Este elemento conntem bordas cores e margens</p>
-    </div>
-    <div class="row">
-        <div class="col-md-2 p-3 bg-dark text-white">.col1</div>
-        <div class="col-md-8 p-3 bg-primary text-white">.col2</div>
-        <div class="col-md-2 p-3">.col3</div>
-    </div>
-    <div class="h1">
-        <h1>Tipografia h1</h1>
-        <h2>Tipografia h2</h2>
-        <h3>Tipografia h3</h3>
-        <h4 class="h1">Tipografia h4</h4>
-        <h5>Tipografia h5</h5>
-        <h6>Tipografia h6</h6>
+    <div class="col-5  h2 container">
+        Para iniciar, digite seus números!
+        <input id="randomMin" type="number">
+        <input id="randomMax" type="number">
+        <input type="button" onclick="randomMaxMin()" value="Numero">
+        
+            <p id="randomMaxMin">NUMEROOOOOOOOOOO</p>
+        
         
     </div>
-    <div>
-        <p class="display-1">OI</p>
-        <p class="display-2">OI</p>
-        <p class="display-3">OI</p>
-        <p class="display-4">OI</p>
-        <p class="display-5">OI</p>
-        <p class="display-6">OI</p>
+    <div class="conteudo">
+        
     </div>
-
+    </body>
+    </html>
+    <script>
+    function randomMaxMin()
+    {
+    let randomMin = document.getElementById('randomMin').value;
+    let randomMax = document.getElementById('randomMax').value;
+    let randomMaxMin = Math.floor(Math.random() * (randomMax - randomMin + 1) + randomMin);
+    document.getElementById("randomMaxMin").innerHTML = randomMaxMin;
+    }
+    </script>
 </body>
 </html>
