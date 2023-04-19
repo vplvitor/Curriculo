@@ -1,4 +1,4 @@
-        body{
+body{
     color: white;
     text-shadow: 1px 1px black;
     background-color: #777777;
@@ -20,6 +20,19 @@ h3{
     border-radius: 10px;
     width: 90px;
     border: 1px solid #FFA421;
+}
+.card{
+    --bs-card-bg: var(--bs-success);
+}
+.card-body{
+    color: white;
+    text-shadow: 1px 1px black;
+
+    
+    
+}
+.card-body:hover{
+    color: pink;
 }
 .title{
     border-bottom: 10px #FFA421 dotted;
