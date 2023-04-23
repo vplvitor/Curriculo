@@ -35,9 +35,11 @@
         }
     function randomMaxMin()
     {
-    let randomMin = document.getElementById('randomMin').value;
+    let randomMin  = document.getElementById('randomMin').value;
+    randomMin = parseInt(randomMin);
     let randomMax = document.getElementById('randomMax').value;
-    let randomMaxMin = Math.floor(Math.random() * (randomMax - randomMin + 2) + randomMin);
+    randomMax = parseInt(randomMax);
+    let randomMaxMin = Math.floor(Math.random() * (randomMax - randomMin + 1) + randomMin);
     document.getElementById("randomMaxMin").innerHTML = randomMaxMin;
     }
     function casino()
