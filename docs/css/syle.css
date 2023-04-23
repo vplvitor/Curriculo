@@ -9,18 +9,22 @@ h1{
     border-radius: 10px;
     width: 162.5px;
     border: 1px solid #FFA421;
+    background-image: radial-gradient(circle at center, #555555, #FFA421);
 }
 h2{
     background-color: #555555;
     border-radius: 10px;
     width: 141.5px;
     border: 1px solid #FFA421;
+    background-image: radial-gradient(circle at center, #555555, #FFA421);
+
 }
 h3{
     background-color: #555555;
     border-radius: 10px;
     width: 90px;
     border: 1px solid #FFA421;
+    background-image: radial-gradient(circle at center, #555555, #FFA421);
 }
 h4{
     background-color: #555555;
@@ -82,7 +86,7 @@ h6{
     width: 95%;
 }
 .container{
-    padding-left: 2.5%;
+    padding-left: 12.5%;
 }
 .titleNotas{
     width: 75%;
@@ -163,4 +167,30 @@ a:hover{
     width: 25%;
     margin-left: 2.5%;
     border-left: 2.5%;
+}
+.aprovado{
+    background-color: var(--bs-success);
+}
+.recuperacao{
+    background-color: var(--bs-primary);
+}
+.reprovado{
+    background-color: var(--bs-danger);
+}
+#result{
+    width: 75%;
+}
+.notas{
+    background-image: radial-gradient(circle at center, #FFA421, #555555);
+    
+}
+.index{
+    background-image: radial-gradient(circle at center, #7BFF9B, #7B97FF);
+}
+.form{
+    background-image: radial-gradient(circle at center,#001B94, #B5AF00, #229400);
+}
+#estado:hover{
+    color: #FEE76F;
+    transition: 0.5s;
 }

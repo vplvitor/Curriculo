@@ -8,19 +8,20 @@
     <link rel="stylesheet" href="css/syle.css">
     <title>Notas</title>
 </head>
-<body>
+<body class="notas">
     <div class="b-6 m-6 p-6  col-lg-12 row">
         <h1>Simulador de Notas</h1>
     </div>
     <div class="col-5 bl-12 pl-12 ml-12 container">
         <h2 class="titleNotas">Para iniciar, digite as notas do aluno nos campos.</h2>
+        <form action="">
         <input class="inputNotas" id="nota1" type="number">
         <input class="inputNotas" id="nota2" type="number">
         <input class="inputNotas" id="nota3" type="number">
         <input class="inputNotas" id="nota4" type="number">
         <input class="btnNotas" type="button" onclick="funcaoCalculoFinal()" value="Calculo de Media">
-        
-        <p>Media do Aluno:</p><h5 class="notasPrint border-1 bg-danger"  id="notaMedia"></h5>
+        </form>
+        <div id="result"></div>
             
         
         
@@ -37,16 +38,21 @@
             let nota4 = document.getElementById('nota4').value;
             let notaSoma = parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3) + parseFloat(nota4);
             let notaMedia = parseFloat(notaSoma) / 4;
-            
-            if(notaMedia < 2)
+            let result = document.getElementById("result");
+
+
+            if(notaMedia <= 2)
             {
-                let reprovado = notaMedia;
-                document.getElementById("reprovado").innerHTML = reprovado;
-                return "Reprovado com nota" + reprovado;
+                result.className = "reprovado";
+                result.textContent = "Média Final: " + notaMedia.toFixed(1) + " - Reprovado";
+            }else if(notaMedia >= 2.1 && notaMedia <= 5.9)
+            {
+                result.className = "recuperacao";
+                result.textContent = "Média Final: " + notaMedia.toFixed(1) + " - Recuperação";
+            }else{
+                result.className = "aprovado";
+                result.textContent = "Média Final: " + notaMedia.toFixed(1) + " - Aprovado";
             }
-            
-            
-            document.getElementById("notaMedia").innerHTML = notaMedia;
         }
     </script>
 </html>
