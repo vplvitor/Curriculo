@@ -2,6 +2,7 @@ body{
     color: white;
     text-shadow: 1px 1px black;
     background-color: #777777;
+    padding: 1.5%;
 }
 h1{
     background-color: #555555;
@@ -21,22 +22,124 @@ h3{
     width: 90px;
     border: 1px solid #FFA421;
 }
+h4{
+    background-color: #555555;
+    border-radius: 10px;
+    width: 80%;
+    border: 1px solid #FFA421;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
+h6{
+    color: white;
+    padding: 1.5%;
+}
+.titleSorteio{
+    width: 17.5%;
+    margin-left: 40%;
+    background-color: #9800D5;
+
+}
+.inputRandom{
+    border-radius: 5px;
+    background-color: white;
+    width: 50%;
+}
+.inputRandom:hover{
+    background-color: #555555;
+    color: #FFA421;
+    transition: 0.5s;
+    
+}
+.inputRandomSort{
+    border-radius: 50px;
+    background-color: black;
+    width: 3.5rem;
+    padding-left: 5px;
+
+}
+.inputRandomSort:hover{
+    background-color: white;
+    border: 2px 2px black solid;
+    border-color: red;
+    transition: 0.5s;
+    
+}
+.random{
+    background-color: #555555;
+    background-position: center;
+    background-repeat: no-repeat, repeat;
+    background-size: auto;
+    background-image: url('waluigiPinball.jpg'), url('casinoPalace.jpg');
+}
+.bioInformataTitle{
+    padding: 2.5%;
+    text-align: justify;
+}
+.bioInformata{
+    padding-top: 1%;
+    text-align: left;
+    width: 95%;
+}
+.container{
+    padding-left: 2.5%;
+}
+.titleNotas{
+    width: 75%;
+}
+.inputNotas{
+    width: 5%;
+    border-radius: 10px;
+    border: 2px 2px solid black;
+    background-color: white;
+
+}
+.btnNotas{
+    width: 40%;
+}
+.notasPrint{
+    width: 50%;
+}
+.row{
+    width: 90%;
+}
 .card{
     --bs-card-bg: var(--bs-success);
+    
+    max-width: 75%
 }
 .card-body{
     color: white;
     text-shadow: 1px 1px black;
-
-    
-    
 }
 .card-body:hover{
-    color: pink;
+    color: #8AA8FF;
+    transition: 0.5s;
 }
 .title{
     border-bottom: 10px #FFA421 dotted;
 
+}
+input{
+    border: 1px solid #FFA421;
+    border-radius: 5px;
+}
+input:hover{
+    border-color: #FFFFFF;
+    background-color: #FFA421;
+    color: #FFFFFF;
+}
+.prints{
+    margin: 2.5%;
+}
+button{
+    border: 1px solid #FFA421;
+    border-radius: 5px;
+}
+button:hover{
+    border-color: #FFFFFF;
+    background-color: #FFA421;
+    color: #FFFFFF;
 }
 a:link{
     color: #FFA421;
@@ -44,9 +147,20 @@ a:link{
     
 }
 a:visited{
-    color: gray;
+    color: #FFA421;
 }
 a:hover{
-    color: pink;
+    color: #FEE76F;
+    transition: 0.5s;
+}
 
+.form-group{
+    width: 90%;
+    margin: 0%;
+
+}
+.form-check{
+    width: 25%;
+    margin-left: 2.5%;
+    border-left: 2.5%;
 }
