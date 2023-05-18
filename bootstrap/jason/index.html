@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="js/viacep.js"></script>
+    <script>
+        function form1()
+        {
+            let tableUser = document.querySelector('table');
+            let nome = document.getElementById('nome').value;
+            let email = document.getElementById('email').value;
+            let senha = document.getElementById('senha').value;
+            let data = document.getElementById('data').value;
+            let estado = document.getElementById('estado').value;
+
+            console.log(nome);
+            console.log(email);
+            console.log(senha);
+            console.log(data);
+            console.log(estado);
+
+            let divResult = document.getElementById('result');
+            for(let i = 0; i < 10; i++)
+            {
+                const node = document.createElement(`p`);
+                const text = document.createTextNode(`${tableUser}`);
+                node.appendChild(text);
+                document.getElementById("result").appendChild(node);
+            }
+        }
+        
+        function form2()
+        {
+            let table = document.querySelector('table');
+            let row = table.insertRow();
+            let cell0 = row.insertCell(0);
+            let cell1 = row.insertCell(1);
+            let cell2 = row.insertCell(2);
+            let cell3 = row.insertCell(3);
+            let cell4 = row.insertCell(4);
+            let cell5 = row.insertCell(5);
+            cell0.innerHTML = document.getElementById('nome').value;
+            cell1.innerHTML = document.getElementById('email').value;
+            cell1.innerHTML = document.getElementById('cep').value;
+            cell2.innerHTML  = document.getElementById('data').value;
+            cell3.innerHTML  = document.getElementById('estado').value;
+            cell4.innerHTML = `<button class="bi bi-pencil-square"></button>`;
+        }
+        function edit()
+        {
+            
+        }
+    </script>
+    <title>Form</title>
+</head>
+<body>
+    <div>
+        <form>
+        <div class="form-group row">
+            <label class="col-2 col-form-laber" for="nome">Nome Completo</label>
+        </div>
+        <div class="col-sm-10">
+            <input class="col-6 text-center" type="text" id="nome" required>
+        </div>
+        <div class="form-group row">
+            <label class="col-6 text-center" for="email">Email</label>
+            <input type="text" id="email" required>
+        </div>
+        <div class="form-group row">
+            <label class="col-6 text-center" for="cep">CEP</label>
+            <input type="text" id="cep" onblur="pesquisacep(this.value)";/>>
+            
+        </div>
+        <div class="form-group row">
+            <label class="col-6 text-center" for="data">Nascimento</label>
+            <input type="date" id="data">
+        </div>
+        <div class="form-group row">
+            <label class="col-6 text-center" for="estado">UF</label>
+            <select name="estado" id="estado">
+                <option value="Paraná" selected>Paraná</option>
+                <option value="São Paulo">São Paulo</option>
+                <option value="Rio de Janeiro">Rio de Janeiro</option>
+        </select>
+        </div>
+        <br>
+        <div class="form-group row">
+            <input class="btn btn-primary col-2 mp-6 pl-6 text-center" type="button" value="Salvar" onclick="form2()">
+        </div>
+        </form>
+        <div id="tabular">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td class="col-2">Nome</td>
+                        <td class="col-2">Email</td>
+                        <td class="col-2">CEP</td>
+                        <td class="col-2">Data</td>
+                        <td class="col-2">Estado</td>
+                    </tr>
+                    <tr>
+                        <td class="col-2">Juliana Costa</td>
+                        <td class="col-2">juliana@gmail</td>
+                        <td class="col-2">80000-40</td>
+                        <td class="col-2">13/01/1988</td>
+                        <td class="col-2">Parana</td>
+                        <td><i class="bi bi-pencil-square" onclick="edit()"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="result">
+    
+        </div>
+    </body>
+    </html>
