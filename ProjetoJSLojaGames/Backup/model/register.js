@@ -2,44 +2,24 @@ const conexao = require('../infra/connection')
 
 class Register{
 
-    adiciona(Clientes, res){
-        let sql = 'INSERT INTO Clientes SET ?'
-        conexao.query(sql,Clientes,(erro, resultado)=> {
+    adiciona(Register, res){
+        let sql = 'INSERT INTO Register SET ?'
+        conexao.query(sql,Register,(erro, resultado)=> {
             if(erro){
-                res.status(400).json(erro)
+                res.json(erro)
                 console.log(erro)
             }else{
-                res.status(200).json(resultado)
+                res.json(resultado)
             }
         })
     }
-
-    lista(res){
-        const sql = 'SELECT * FROM Clientes'
-        conexao.query(sql, (erro, resultado) => {
-            if(erro){res.status(400).json(erro)
-            }else{
-                res.status(200).json(resultado)}})
-    }
-
-    buscaPorId(id, res){
-        let sql = 'SELECT * FROM Clientes WHERE idClientes=?'// ? = 1
-        conexao.query(sql,id,(erro, resultado)=>{
-            if(erro){
-                res.status(400).json(erro)
-            }else{
-                res.status(200).json(resultado)
-            }
-        })
-    }
-    
     altera(id, valores, res){
-        let sql = 'UPDATE Clientes SET ? WHERE idClientes = ?'
+        let sql = 'UPDATE Register SET ? WHERE idRegister = ?'
         conexao.query(sql,[valores, id],(erro, resultado)=>{
             if(erro){
-                res.status(400).json(erro)
+                res.json(erro)
             }else{
-                res.status(200).json(resultado)
+                res.json(resultado)
             }
         })
     }

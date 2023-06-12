@@ -1,4 +1,3 @@
-// functions
 function fazPost(url, body){
 
     let req = new XMLHttpRequest()
@@ -13,16 +12,16 @@ function fazPost(url, body){
 
 
 function cadastrarUsuario(){
-    let url = "http://localhost:8000/register"
+    let url = "http://localhost:5500/register"
     let name = document.getElementById('name').value
     let email = document.getElementById('email').value
     let password = document.getElementById('password').value
     let birth = document.getElementById('birth').value
     body = {
-        "nome": name,
-        "email": email,
-        "senha": password,
-        'nascimento': birth
+        'name': name,
+        'email': email,
+        'password': password,
+        'birth': birth
     }
     console.log(body);
     fazPost(url, body)
